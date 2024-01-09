@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.josequal.josequaltask.donmain.ContactsAndSeasModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_13sdp"
+        android:background="@drawable/card_contact_and_seas"
+        android:paddingEnd="@dimen/_13sdp"
+        android:paddingBottom="@dimen/_9sdp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/siv_contact_Icon"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginStart="@dimen/_13sdp"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:scaleType="centerCrop"
+            app:imageResource="@{data.image}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/circular_view"
+            tools:src="@drawable/ic_contact_image" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_contact_name"
+            android:layout_width="@dimen/_129sdp"
+            android:layout_height="@dimen/_19sdp"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:text="@{data.name}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/siv_contact_Icon"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Diana Richards" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_contact_description"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_16sdp"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:paddingTop="@dimen/_2sdp"
+            android:text="@{data.description}"
+            android:textColor="@color/gray_text"
+            app:layout_constraintStart_toEndOf="@id/siv_contact_Icon"
+            app:layout_constraintTop_toBottomOf="@id/tv_contact_name"
+            tools:text="Sea Freight Operation " />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_contact_email"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_16sdp"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:paddingBottom="@dimen/_2sdp"
+            android:text="@{data.info}"
+            android:textColor="@color/gray_text"
+            app:layout_constraintStart_toEndOf="@id/siv_contact_Icon"
+            app:layout_constraintTop_toBottomOf="@id/tv_contact_description"
+            tools:text="Diana@gmail.com" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/btn_contact_message"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_11sdp"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:background="@drawable/btn_contact"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_contact_email">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/siv_contact_chat"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:padding="@dimen/_1sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_chat"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_18sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:text="Message"
+                android:textColor="@color/gray_text"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/siv_contact_chat"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/btn_contact_phone"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_11sdp"
+            android:background="@drawable/btn_contact"
+            app:layout_constraintStart_toEndOf="@id/btn_contact_message"
+            app:layout_constraintTop_toTopOf="@id/btn_contact_message">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/siv_contact_phone"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:padding="@dimen/_1sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_phone_black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_18sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:text="Phone"
+                android:textColor="@color/gray_text"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/siv_contact_phone"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

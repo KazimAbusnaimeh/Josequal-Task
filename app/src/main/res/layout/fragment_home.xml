@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/home_bg">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/siv_home_boat"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_170sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_boat_image"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/bottom_corner_radius" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_170sdp"
+                android:alpha="0.2"
+                android:background="@color/black"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/bottom_corner_radius" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/siv_home_back_btn_shadow"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_13sdp"
+                android:background="#66FFFFFF"
+                app:layout_constraintBottom_toBottomOf="@id/siv_home_boat"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/siv_home_boat"
+                app:shapeAppearanceOverlay="@style/social_media_btn_corner" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/siv_home_back_btn"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:background="@color/white"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_back"
+                app:layout_constraintBottom_toBottomOf="@id/siv_home_boat"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/siv_home_boat"
+                app:shapeAppearanceOverlay="@style/social_media_btn_corner" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/siv_home_chat_btn_shadow"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_13sdp"
+                android:background="#66FFFFFF"
+                app:layout_constraintBottom_toBottomOf="@id/siv_home_boat"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/siv_home_boat"
+                app:shapeAppearanceOverlay="@style/social_media_btn_corner" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/siv_home_chat_btn"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:background="@color/white"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_chat_2"
+                app:layout_constraintBottom_toBottomOf="@id/siv_home_boat"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/siv_home_boat"
+                app:shapeAppearanceOverlay="@style/social_media_btn_corner" />
+
+            <LinearLayout
+                android:id="@+id/ll_logon_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circle_bg"
+                android:padding="@dimen/_4sdp"
+                app:layout_constraintBottom_toBottomOf="@id/siv_home_boat"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/siv_home_boat">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="@dimen/_90sdp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_company_logo_image"
+                    app:layout_constraintBottom_toBottomOf="@id/siv_home_boat"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/siv_home_boat"
+                    app:shapeAppearanceOverlay="@style/circular_view" />
+            </LinearLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_home_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:gravity="center"
+                android:text="Project Name"
+                android:textColor="@color/primary"
+                android:textSize="@dimen/_20ssp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/ll_logon_container" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_home_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center"
+                android:text="701 Ocean avenue, Unit 103, Santa Monica"
+                android:textColor="@color/gray_text"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_title" />
+
+            <LinearLayout
+                android:id="@+id/ll_home_social_media"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_66sdp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_description">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginEnd="@dimen/_13sdp"
+                    android:background="@color/primary"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_twitter"
+                    app:shapeAppearanceOverlay="@style/social_media_btn_corner" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginEnd="@dimen/_13sdp"
+                    android:background="@color/primary"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_facebook"
+                    app:shapeAppearanceOverlay="@style/social_media_btn_corner" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginEnd="@dimen/_13sdp"
+                    android:background="@color/primary"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_instagram"
+                    app:shapeAppearanceOverlay="@style/social_media_btn_corner" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginEnd="@dimen/_13sdp"
+                    android:background="@color/primary"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_linkedin"
+                    app:shapeAppearanceOverlay="@style/social_media_btn_corner" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_home_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/ll_home_social_media"
+                tools:listitem="@layout/row_information" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_home_about_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_13sdp"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:text="About"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18ssp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/rv_home_info" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_home_about_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:paddingVertical="@dimen/_3sdp"
+                android:text="@string/about_description"
+                android:textColor="@color/neutrals"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_about_title" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_home_about_see_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_13sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:gravity="center"
+                android:text="see more"
+                android:textColor="@color/blue_text"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_about_description" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/siv_home_see_more_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:src="@drawable/ic_arrow_right"
+                app:layout_constraintBottom_toBottomOf="@id/tv_home_about_see_more"
+                app:layout_constraintStart_toEndOf="@id/tv_home_about_see_more"
+                app:layout_constraintTop_toTopOf="@id/tv_home_about_see_more" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_home_location_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_13sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="Location"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18ssp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_about_see_more" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/siv_home_location_image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_marginHorizontal="@dimen/_13sdp"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_map"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_location_title" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_home_contacts_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_13sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="Contacts"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18ssp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/siv_home_location_image" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_home_contacts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_home_contacts_title"
+                tools:listitem="@layout/row_contact" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_home_selector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_13sdp"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_4sdp"
+                android:paddingVertical="@dimen/_3sdp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rv_home_contacts"
+                tools:listitem="@layout/row_selector" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_home_seas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_13sdp"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:layout_marginBottom="@dimen/_28sdp"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rv_home_selector"
+                tools:listitem="@layout/row_sea" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

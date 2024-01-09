@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.josequal.josequaltask.donmain.InformationModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_1sdp"
+        android:background="@color/white">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/siv_information_icon"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_13sdp"
+            app:imageResource="@{data.icon}"
+            app:layout_constraintBottom_toBottomOf="@id/siv_information_description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/siv_information_description"
+            tools:src="@drawable/ic_location" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/siv_information_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_18sdp"
+            android:paddingStart="@dimen/_13sdp"
+            android:text="@{data.information}"
+            android:textColor="@color/foundation"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/siv_information_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Get Directions" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

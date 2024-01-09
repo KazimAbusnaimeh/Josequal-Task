@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.josequal.josequaltask.donmain.SelectorModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_selector_item"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_34sdp"
+        android:layout_gravity="center"
+        android:background="@{data.isSelected ?@drawable/card_selector : @drawable/card_contact_and_seas}"
+        tools:background="@drawable/card_selector">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_selector_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_7sdp"
+            android:text="@{data.title}"
+            android:textColor="@{data.isSelected ? @color/white : @color/primary}"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Marinier updates"
+            tools:textColor="@color/white" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

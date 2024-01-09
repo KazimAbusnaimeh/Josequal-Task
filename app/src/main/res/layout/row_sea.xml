@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.josequal.josequaltask.donmain.ContactsAndSeasModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_85sdp"
+        android:layout_marginBottom="@dimen/_13sdp"
+        android:background="@drawable/card_contact_and_seas">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/siv_sea_icon"
+            android:layout_width="@dimen/_85sdp"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            app:imageResource="@{data.image}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/sea_image_corner"
+            tools:src="@drawable/ic_boat_image" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_margin="@dimen/_4sdp"
+            android:background="@color/white"
+            android:src="@drawable/ic_download"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/circular_view" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/_13sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/siv_sea_icon"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{data.name}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold"
+                tools:text="Mariner Update Title" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{data.description}"
+                android:textColor="@color/gray_text"
+                android:textSize="@dimen/_12ssp"
+                tools:text="565677, Revision, Start and End" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{data.info}"
+                android:textColor="@color/gray_text"
+                android:textSize="@dimen/_12ssp"
+                tools:text="Date." />
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

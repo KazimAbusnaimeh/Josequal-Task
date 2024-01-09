@@ -1,0 +1,27 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.JosequalTask" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.JosequalTask" parent="Base.Theme.JosequalTask" />
+    <style name="circular_view" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+    <style name="bottom_corner_radius" parent="">
+        <item name="cornerSizeBottomLeft">@dimen/_17sdp</item>
+        <item name="cornerSizeBottomRight">@dimen/_17sdp</item>
+    </style>
+
+    <style name="social_media_btn_corner" parent="">
+        <item name="cornerSize">@dimen/_10sdp</item>
+    </style>
+
+    <style name="sea_image_corner" parent="">
+        <item name="cornerSizeBottomLeft">@dimen/_8sdp</item>
+        <item name="cornerSizeTopLeft">@dimen/_8sdp</item>
+    </style>
+
+
+</resources>
